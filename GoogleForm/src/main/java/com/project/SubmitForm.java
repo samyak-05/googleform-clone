@@ -23,11 +23,10 @@ public class SubmitForm extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url="jdbc:mysql://localhost:3306/google";
 		String user="root";
-		String password="Password";
+		String password="********";   //I have hidden my password.
 		
-		String query="INSERT INTO INFO VALUES(?,?,?,?,?,?,?)";
 		String uname=request.getParameter("user_name");
-		Long phone=Long.parseLong(request.getParameter("phone_no"));
+		Long phone=Long.parseLong(request.getParameter("phone_no")); //We have used Long instead of int because "2,147,483,647 is highest integer in JAVA.
 		String email=request.getParameter("email");;
 		String city=request.getParameter("city");;
 		String state=request.getParameter("state");;
